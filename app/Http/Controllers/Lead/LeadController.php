@@ -46,35 +46,7 @@ class LeadController extends Controller
     }
     
     public function googlesheet(){
-         $route_active = 'Facebook Lead';
-            $sheetdb = new SheetDB('mqp0v0qom09h6');
-         $leads = $sheetdb->get();
-    
-         
-         
-         
-         
-        foreach ($leads as $sku) {
-            
-            $check=Lead::where('ad_id',$sku->id)->first();
-            if(!empty($check)){
-         
-      
-            }else{
-                     $insertlead= new Lead();
-                $insertlead->full_name=$sku->full_name ?? '';
-      $insertlead->ad_name=$sku->ad_name ?? '';
-      $insertlead->form_name=$sku->form_name ?? '';
-      $insertlead->campaign_name=$sku->campaign_name ?? '';
-      $insertlead->purpose=$sku->solar_panel_purpose ?? '';
-      $insertlead->ad_id=$sku->id ?? '';
-      $insertlead->phone=$sku->work_phone_number ?? '';
-      $insertlead->lead_status='pending' ?? '';
-    
-                
-            }
-              $insertlead->save();
-}
+
 
          
          $total_staff_leads = $this->countStaffLeads();
@@ -675,23 +647,23 @@ class LeadController extends Controller
    public function index()
     {
 
- $sheetdb = new SheetDB('mqp0v0qom09h6');
+ $sheetdb = new SheetDB('9rfny9u2rjxtm');
          $leads = $sheetdb->get();
  foreach ($leads as $sku) {
             
             $check=Lead::where('ad_id',$sku->id)->first();
             if(!empty($check)){
       }else{
-                     $insertlead= new Lead();
-                $insertlead->full_name=$sku->full_name ?? '';
-      $insertlead->ad_name=$sku->ad_name ?? '';
-      $insertlead->form_name=$sku->form_name ?? '';
-      $insertlead->campaign_name=$sku->campaign_name ?? '';
-      $insertlead->purpose=$sku->solar_panel_purpose ?? '';
-      $insertlead->ad_id=$sku->id ?? '';
-      $insertlead->phone=$sku->work_phone_number ?? '';
-      $insertlead->lead_status='pending' ?? '';
-    $insertlead->save();
+        $insertlead= new Lead();
+        $insertlead->full_name=$sku->full_name ?? '';
+$insertlead->ad_name=$sku->ad_name ?? '';
+ $insertlead->form_name=$sku->you_city ?? '';
+$insertlead->campaign_name=$sku->your_monthly_electricity_bill ?? '';
+$insertlead->purpose=$sku->solar_panel_purpose ?? '';
+$insertlead->ad_id=$sku->id ?? '';
+$insertlead->phone=$sku->work_phone_number ?? '';
+$insertlead->lead_status='pending' ?? '';
+$insertlead->save();
  }
               
 }

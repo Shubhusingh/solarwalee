@@ -148,11 +148,7 @@
         $leadCount++;
     @endphp
                             <tr>
-    <!--                          <td-->
-    <!--    @if ($lead->lead_status_id == '1')-->
-    <!--        class="bg-success"-->
-    <!--    @endif-->
-    <!-->{{ $leadCount }}</td>-->
+    
                               <td style="font-size: 13px;">
                                   @if(!empty($lead->first_name))
                                 <b>Name-</b> {{$lead->first_name }} {{$lead->last_name}}<br>
@@ -163,9 +159,9 @@
                                 <b>Phone-</b> <a href="tel:{{$lead->phone}}"><b>{{$lead->phone}}</b></a><br>
                                 <b>Gmail-</b> {{$lead->gmail ?? '' }}<br>
                                 <!--<b>Lead-</b> {{$lead->id ?? '' }}<br>-->
-                                <b>purpose-</b> {{$lead->solar_panel_purpose ?? '' }}<br>
-                                <b>form_name-</b> {{$lead->form_name }}<br>
-                                <b>campaign_name-</b> {{$lead->campaign_name ?? '' }}<br>
+                                <b>purpose-</b> {{$lead->purpose ?? '' }}<br>
+                                <b>City-</b> {{$lead->form_name }}<br>
+                                <b>Electricity-</b> {{$lead->campaign_name ?? '' }}<br>
                            
                                 
                               </td>
