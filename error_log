@@ -1,0 +1,5 @@
+[12-Mar-2024 05:58:15 UTC] PHP Warning:  require(/home4/onedits3/booksale.bollywoodcinemaposter.com/../vendor/autoload.php): Failed to open stream: No such file or directory in /home4/onedits3/booksale.bollywoodcinemaposter.com/index.php on line 5
+[12-Mar-2024 05:58:15 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home4/onedits3/booksale.bollywoodcinemaposter.com/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home4/onedits3/booksale.bollywoodcinemaposter.com/index.php:5
+Stack trace:
+#0 {main}
+  thrown in /home4/onedits3/booksale.bollywoodcinemaposter.com/index.php on line 5
